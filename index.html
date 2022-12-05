@@ -23,8 +23,10 @@
 
 <body>
     <h1>Troll Shop</h1>
+
     <br />
-    <input type="text">
+    <input class="new-title" type="text" placeholder="New tittle...">
+    <button type="button">Change color!</button>
     <br />
     <br />
     <br />
@@ -96,7 +98,7 @@
             let h1Node = document.querySelector('h1');
             h1Node.innerText = newTitle;
         };
-        changeH1("Another tittle:");
+        changeH1("new title");
 
         function changeBackGround(newColor) {
             document.body.style.backgroundColor = newColor;
@@ -116,12 +118,20 @@
         amazonLinks('amazon-link');
 
         function imageVisibility(hiden) {
-            let imagesNodes = document.getElementsByTagName('img');
+            let imagesNodes = document.querySelectorAll('img');
             if (hiden === false) {
-                imagesV.classList.add("hidden")
-            }
+                for (let index = 0; index < imagesNodes.length; index++) {
+                    let imagesNode = imagesNodes[index];
+                    imagesNode.classList.add("hidden")
+                }
+            };
         }
         imageVisibility(false);
+
+        function colorPrice() {
+
+        }
+
     </script>
 </body>
 
