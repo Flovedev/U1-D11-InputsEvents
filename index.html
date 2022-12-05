@@ -26,7 +26,10 @@
 
     <br />
     <input class="new-title" type="text" placeholder="New tittle...">
-    <button type="button">Change color!</button>
+    <button type="button">Change BG color!</button>
+    <button type="button">Another adress</button>
+    <button type="button">Hide pictures</button>
+    <button type="button">Price color</button>
     <br />
     <br />
     <br />
@@ -38,7 +41,7 @@
             <tr>
                 <td>Banana case:</td>
                 <td>Case to keep your banana safe... ??</td>
-                <td>11.99</td>
+                <td class="price">11.99</td>
                 <td>
                     <a
                         href="https://www.amazon.co.uk/BPA-Free-Outdoor-Protector-Carrier-Storage/dp/B08636V98L/ref=sr_1_6?crid=YKSFSFVA9M8A&keywords=banana+case&qid=1670246809&sprefix=banana+case%2Caps%2C63&sr=8-6">
@@ -49,7 +52,7 @@
             <tr>
                 <td>Box::</td>
                 <td>I don't know is just a box</td>
-                <td>2.75</td>
+                <td class="price">2.75</td>
                 <td>
                     <a
                         href="https://www.amazon.co.uk/Box-pack-cardboard-mailing-packaging/dp/B0978XG7WJ/ref=sr_1_7?crid=3UW3S1SFH71XR&keywords=box&qid=1670246688&rdc=1&sprefix=box%2Caps%2C59&sr=8-7">
@@ -60,7 +63,7 @@
             <tr>
                 <td>Drone:</td>
                 <td>A cool flying devide remote controlled</td alt="Drone and controller">
-                <td>49.99</td>
+                <td class="price">49.99</td>
                 <td>
                     <a
                         href="https://www.amazon.co.uk/Foldable-Quarcopter-Rechargeable-Batteries-AIMIHUO/dp/B0BKP4TB6F/ref=sr_1_5?crid=NH6I9JQXZFR0&keywords=drone&qid=1670246848&sprefix=drone%2Caps%2C72&sr=8-5">
@@ -71,7 +74,7 @@
             <tr>
                 <td>Small phone:</td>
                 <td>Smallest phone in the world, in case you want to lose it easily</td>
-                <td>39.99</td>
+                <td class="price">39.99</td>
                 <td>
                     <a
                         href="https://www.amazon.co.uk/Zanco-Tiny-T1-SIM-Free-Black/dp/B07GBBVR3Y/ref=sr_1_20?crid=2C82SH4J7S1N3&keywords=banana+phone&qid=1670246737&sprefix=banana+phone%2Caps%2C53&sr=8-20">
@@ -82,7 +85,7 @@
             <tr>
                 <td>Trollface mug:</td>
                 <td>A mug with a troll face, why not?</td>
-                <td>12.99</td>
+                <td class="price">12.99</td>
                 <td>
                     <a
                         href="https://www.amazon.co.uk/WeDoMugs-Trollface-Mug-by-WeDoMugs®/dp/B00X69NN2E/ref=sr_1_5?crid=12D25Z1ETM13Y&keywords=trollface&qid=1670246780&sprefix=trollfac%2Caps%2C62&sr=8-5">
@@ -126,11 +129,26 @@
                 }
             };
         }
-        imageVisibility(false);
+        imageVisibility(true);
+
+        function generateRandomColor() {
+            let maxVal = 0xFFFFFF; // 16777215
+            let randomNumber = Math.random() * maxVal;
+            randomNumber = Math.floor(randomNumber);
+            randomNumber = randomNumber.toString(16);
+            let randColor = randomNumber.padStart(6, 0);
+            return `#${randColor.toUpperCase()}`
+        }
+
 
         function colorPrice() {
-
+            let priceNodes = document.getElementsByClassName('price')[0];
+            // for (let index = 0; index < priceNodes.length; index++) {
+            //     let priceNode = priceNodes[index];
+            priceNodes.style.Color = "blue";
         }
+        // }
+        colorPrice()
 
     </script>
 </body>
