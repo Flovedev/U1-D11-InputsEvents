@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smarth Phone Shop</title>
+
+    <style>
+        img {
+            height: 100px;
+            width: 100px;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Troll Shop</h1>
+    <br />
+    <input type="text">
+    <br />
+    <br />
+    <br />
+    <table>
+        <thead>
+            <tr> Products:</tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Banana case:</td>
+                <td>Case to keep your banana safe... ??</td>
+                <td>11.99</td>
+                <td>
+                    <a
+                        href="https://www.amazon.co.uk/BPA-Free-Outdoor-Protector-Carrier-Storage/dp/B08636V98L/ref=sr_1_6?crid=YKSFSFVA9M8A&keywords=banana+case&qid=1670246809&sprefix=banana+case%2Caps%2C63&sr=8-6">
+                        <img src="./assets/bananacase.jpg" alt="Banana case">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Box::</td>
+                <td>I don't know is just a box</td>
+                <td>2.75</td>
+                <td>
+                    <a
+                        href="https://www.amazon.co.uk/Box-pack-cardboard-mailing-packaging/dp/B0978XG7WJ/ref=sr_1_7?crid=3UW3S1SFH71XR&keywords=box&qid=1670246688&rdc=1&sprefix=box%2Caps%2C59&sr=8-7">
+                        <img src="./assets/box.jpg" alt="Cardboar box">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Drone:</td>
+                <td>A cool flying devide remote controlled</td alt="Drone and controller">
+                <td>49.99</td>
+                <td>
+                    <a
+                        href="https://www.amazon.co.uk/Foldable-Quarcopter-Rechargeable-Batteries-AIMIHUO/dp/B0BKP4TB6F/ref=sr_1_5?crid=NH6I9JQXZFR0&keywords=drone&qid=1670246848&sprefix=drone%2Caps%2C72&sr=8-5">
+                        <img src="./assets/drone.jpg" alt="A drone and controller">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Small phone:</td>
+                <td>Smallest phone in the world, in case you want to lose it easily</td>
+                <td>39.99</td>
+                <td>
+                    <a
+                        href="https://www.amazon.co.uk/Zanco-Tiny-T1-SIM-Free-Black/dp/B07GBBVR3Y/ref=sr_1_20?crid=2C82SH4J7S1N3&keywords=banana+phone&qid=1670246737&sprefix=banana+phone%2Caps%2C53&sr=8-20">
+                        <img src="./assets/phone.jpg" alt="Smallest phone in the world">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Trollface mug:</td>
+                <td>A mug with a troll face, why not?</td>
+                <td>12.99</td>
+                <td>
+                    <a
+                        href="https://www.amazon.co.uk/WeDoMugs-Trollface-Mug-by-WeDoMugs®/dp/B00X69NN2E/ref=sr_1_5?crid=12D25Z1ETM13Y&keywords=trollface&qid=1670246780&sprefix=trollfac%2Caps%2C62&sr=8-5">
+                        <img src="./assets/trollmug.jpg" alt="A mug with a troll face">
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function changeH1(newTitle) {
+            let h1Node = document.querySelector('h1');
+            h1Node.innerText = newTitle;
+        };
+        changeH1("Another tittle:");
+
+        function changeBackGround(newColor) {
+            document.body.style.backgroundColor = newColor;
+        };
+        changeBackGround('lightgrey');
+
+        // function changeAdress(newAdress) {
+        //     let adressNode = document.getElementById('adress');
+        //     adressNode.innerText = newAdress;
+        // }
+        // changeAdress('456 Real Fake')
+
+        function amazonLinks(amazonL) {
+            let linksNodes = document.querySelector('a')
+            linksNodes.classList.add(amazonL)
+        };
+        amazonLinks('amazon-link');
+
+        function imageVisibility(hiden) {
+            let imagesNodes = document.getElementsByTagName('img');
+            if (hiden === false) {
+                imagesV.classList.add("hidden")
+            }
+        }
+        imageVisibility(false);
+    </script>
+</body>
+
+<br />
+<br />
+
+<footer>
+    <p class="shop-name">Trollinad</p>
+    <p id="adress">123 Fake street</p>
+
+
+</footer>
+
+
+</html>
